@@ -1,52 +1,19 @@
-# 👉 Archivos y carpetas de dependencias
-node_modules
-dist
-dist-ssr
+# dependencies
+/node_modules
 
-# 👉 Logs de errores y debug
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# production
+/dist
 
-# 👉 Configuración local o sensible
-.env
-.env.*.local
-*.local
+# local env files
+.env.local
+.env.*
 
-# 👉 Archivos específicos del sistema operativo
+# system
 .DS_Store
-Thumbs.db
 
-# 👉 Archivos y carpetas de editores de código
-.vscode/*
-!.vscode/extensions.json
+# IDE
+.vscode/
 .idea/
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
 
-# 👉 Archivos de build de Vite
-*.tsbuildinfo
-
-# 👉 Archivos de lock que no quieres subir (opcional)
+# others
 package-lock.json
-pnpm-lock.yaml
-yarn.lock
-
-# 👉 Archivos temporales del sistema
-*.tmp
-*.temp
-*.bak
-
-# 👉 Archivos de pruebas (si los usas)
-coverage/
-*.lcov
-
-# 👉 Otros posibles archivos generados
-*.log.*
