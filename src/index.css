@@ -1,0 +1,19 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global del body */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6f0f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Hacer que los botones y entradas tengan transición */
+button, input {
+  transition: all 0.3s ease;
+}
