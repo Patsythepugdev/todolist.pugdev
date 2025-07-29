@@ -1,4 +1,4 @@
-name: Deploy Vite React App to GitHub Pages
+name: Deploy To Do List Patsy to GitHub Pages
 
 on:
   push:
@@ -6,26 +6,25 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout código fuente
-        uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-      - name: Instalar Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Instalar dependencias
+      - name: Install Dependencies
         run: npm install
 
-      - name: Construir proyecto
+      - name: Build Project
         run: npm run build
 
-      - name: Subir a GitHub Pages 🚀
+      - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages         # rama de destino
-          folder: dist             # carpeta de build (output)
+          branch: gh-pages
+          folder: dist
