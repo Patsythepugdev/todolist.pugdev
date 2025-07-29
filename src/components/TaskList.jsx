@@ -1,23 +1,14 @@
-// src/components/TaskList.jsx
-import TaskItem from "./TaskItem";
+import React from 'react';
+import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, onCompleteTask, onDeleteTask }) => {
-  if (tasks.length === 0) {
-    return <p style={{ textAlign: "center", color: "#555" }}>No hay tareas, añadir tareas</p>;
-  }
-
+function TaskList({ tasks }) {
   return (
-    <ul id="todo-list">
-      {tasks.map((task, i) => (
-        <TaskItem
-          key={i}
-          task={task}
-          onComplete={() => onCompleteTask(i)}
-          onDelete={() => onDeleteTask(i)}
-        />
+    <ul>
+      {tasks.map((task) => (
+        <TaskItem key={task.id} task={task} />
       ))}
     </ul>
   );
-};
+}
 
 export default TaskList;
