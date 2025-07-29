@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: write  # ✅ Necesario para hacer push a gh-pages
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,11 +21,11 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Build del sitio
+      - name: Construir proyecto
         run: npm run build
 
-      - name: Deploy a GitHub Pages 🚀
+      - name: Subir a GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages   # rama de destino
-          folder: dist        # carpeta generada por Vite
+          branch: gh-pages         # rama de destino
+          folder: dist             # carpeta de build (output)

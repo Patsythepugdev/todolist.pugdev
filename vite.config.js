@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/todolist/', // 👈 nombre del repo en GitHub
+  base: '/todolist/', //https://github.com/alejandrabarcena/todolist
 })
